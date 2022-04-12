@@ -3,3 +3,7 @@
     color: white;
     margin-right: 15px;
 }
+
+.logout {
+    cursor: pointer;
+}

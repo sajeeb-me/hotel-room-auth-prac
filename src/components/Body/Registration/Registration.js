@@ -6,6 +6,7 @@ import FacebookIcon from '../../../icons/facebook.png'
 import GoogleIcon from '../../../icons/google.png'
 import TwitterIcon from '../../../icons/twitter.png'
 import useFirebase from '../../../hooks/useFirebase';
+import auth from '../../../firebase.init';
 
 
 const Registration = () => {
@@ -14,6 +15,7 @@ const Registration = () => {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [confirmPass, setConfirmPass] = useState('')
+    const [error, setError] = useState('')
 
     const getName = e => {
         setName(e.target.value)
@@ -28,17 +30,23 @@ const Registration = () => {
         setConfirmPass(e.target.value)
     }
 
-    const { handleSignInWithGoogle, handleSignInWithFacebook } = useFirebase()
+    const { handleCreateUser, handleSignInWithGoogle, handleSignInWithFacebook, handleSignInWithTwitter } = useFirebase()
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
+        event.preventDefault();
         if (form.checkValidity() === false) {
-            event.preventDefault();
             event.stopPropagation();
             return;
         }
-
         setValidated(true);
+        setError('')
+        if (pass !== confirmPass) {
+            setError('Password mismatched')
+            return
+        }
+
+        handleCreateUser(auth, email, pass)
     };
     return (
         <div className='min-vh-100'>
@@ -78,15 +86,16 @@ const Registration = () => {
                             Please provide a valid password.
                         </Form.Control.Feedback>
                     </Form.Group>
+                    <p className='text-danger'><small>{error}</small></p>
                     <p><small>Already have account? <Link to='/login'>login</Link></small></p>
                     <Button className='px-4' variant="primary" type="submit">
-                        Submit
+                        Register
                     </Button>
 
                     <div className='text-center mt-3'>
                         <img onClick={handleSignInWithFacebook} className='icon' src={FacebookIcon} alt="" />
                         <img onClick={handleSignInWithGoogle} className='icon mx-4' src={GoogleIcon} alt="" />
-                        <img className='icon' src={TwitterIcon} alt="" />
+                        <img onClick={handleSignInWithTwitter} className='icon' src={TwitterIcon} alt="" />
                     </div>
 
                 </Form>
