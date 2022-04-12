@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "roomName": "Delux King",
+        "aboutRoom": "Contemporary styled in relaxed natural tones, this 30-square-metre guestroom boasts one king bed with feather pillows. A separate walk-in rain shower can be found in the spacious bathroom, while modern amenities include a 42-inch LCD TV with satellite channels, as well as high speed Internet.",
+        "img": "https://i.ibb.co/2NptJyr/hotel-room-1447201-640.jpg"
+    },
+    {
+        "id": 2,
+        "roomName": "Delux Twin",
+        "aboutRoom": "Contemporary styled in relaxed natural tones, this 30-square-metre guestroom boasts two twin beds with feather pillows. A separate walk-in rain shower can be found in the spacious bathroom, while modern amenities include a 42-inch LCD TV with satellite channels, as well as high speed Internet.",
+        "img": "https://i.ibb.co/25NY9VK/hotel-2037166-640.jpg"
+    },
+    {
+        "id": 3,
+        "roomName": "Junior Suites",
+        "aboutRoom": "Contemporary design and custom artwork create an inviting ambience in this 45-square-metre suite with its one king bed, city views, well-lit, over-sized work area, spa-inspired deep soak bathtub, separate rain shower, upgraded bath amenities and access to evening cocktail hours. Enjoy modern conveniences such as a 55-inch LCD TV and wired/wireless Internet access.",
+        "img": "https://i.ibb.co/7GsZqg6/room-2269591-640.jpg"
+    },
+    {
+        "id": 4,
+        "roomName": "Executive Suites",
+        "aboutRoom": "Contemporary design and custom artwork create an inviting ambience in this 70-square-metre suite with its one king bed, city views, well-lit, over-sized work area, deep soak bathtub, separate rain shower, upgraded bath amenities and access to evening cocktail hours. Enjoy modern conveniences such as a 55-inch LCD TV and high speed Internet access.",
+        "img": "https://i.ibb.co/yNTCMC0/room-4768551-640.jpg"
+    }
+]
