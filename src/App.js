@@ -8,6 +8,7 @@ import Login from './components/Body/Login/Login';
 import Header from './components/Common/Header/Header';
 import Footer from './components/Common/Footer/Footer'
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import Booking from './components/Body/Booking/Booking';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Rooms />
           </RequireAuth>
         } />
+        <Route path='/booking' element={<Booking />} />
         <Route path='/registration' element={<Registration />} />
         <Route path='/login' element={<Login />} />
       </Routes>
